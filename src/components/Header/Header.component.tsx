@@ -11,6 +11,7 @@ import {
 } from './Header.styles';
 import Image from 'next/image';
 import cartIcon from '../../../public/icons/cart-icon.svg';
+import Link from 'next/link';
 
 export const Header: FunctionComponent<HeaderProps> = ({
   totalItems,
@@ -18,16 +19,20 @@ export const Header: FunctionComponent<HeaderProps> = ({
 }) => {
   return (
     <HeaderBox>
-      <HeaderLogo>WeMovies</HeaderLogo>
-      <CartBox>
-        <CartInfo>
-          <CartInfoTitle>{cartTitle}</CartInfoTitle>
-          <CartInfoItems>{totalItems} itens</CartInfoItems>
-        </CartInfo>
-        <CartIcon>
-          <Image src={cartIcon} alt="Picture of cart icon" />
-        </CartIcon>
-      </CartBox>
+      <Link href="/">
+        <HeaderLogo>WeMovies</HeaderLogo>
+      </Link>
+      <Link href="/cart">
+        <CartBox>
+          <CartInfo>
+            <CartInfoTitle>{cartTitle}</CartInfoTitle>
+            <CartInfoItems>{totalItems} itens</CartInfoItems>
+          </CartInfo>
+          <CartIcon>
+            <Image src={cartIcon} alt="Picture of cart icon" />
+          </CartIcon>
+        </CartBox>
+      </Link>
     </HeaderBox>
   );
 };

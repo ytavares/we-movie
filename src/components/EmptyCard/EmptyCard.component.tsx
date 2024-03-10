@@ -8,10 +8,13 @@ import {
 import Image from 'next/image';
 import emptyImg from '../../../public/images/empty-img.png';
 import { Button } from '../Button';
+import { useRouter } from 'next/router';
 
 export const EmptyCard: FunctionComponent<EmptyCardProps> = ({ title }) => {
-  const handleReload = () => {
-    window.location.reload();
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push('/');
   };
   return (
     <EmptyCardBox>
@@ -21,7 +24,7 @@ export const EmptyCard: FunctionComponent<EmptyCardProps> = ({ title }) => {
       </EmptyCardImage>
       <Button
         text="Recarregar página"
-        onClick={handleReload}
+        onClick={handleRedirect}
         variant="default"
       />
     </EmptyCardBox>

@@ -24,6 +24,10 @@ export const ButtonComponent = styled.button<{
   letter-spacing: 0em;
   text-align: center;
   color: ${(props) => props.theme.color.white.main};
+  &:hover {
+    background: ${(props) => props.theme.color.primary.dark};
+    transition: 0.6s;
+  }
 `;
 export const AddCartIcon = styled.div`
   width: 13.6px;

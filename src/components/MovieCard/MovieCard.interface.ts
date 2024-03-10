@@ -1,6 +1,9 @@
 export interface MovieCardProps {
-  srcImg: string;
+  id?: number;
   title: string;
-  value: string;
+  price: number;
+  image: string;
+  itemsInCart?: number;
+  quantity?: number;
   onAddItem: () => void;
 }

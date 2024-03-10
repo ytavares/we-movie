@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const EmptyCardBox = styled.div`
+export const CheckoutCardBox = styled.div`
   width: 100%;
   height: 100%;
   border-radius: ${(props) => props.theme.border.radius};
@@ -14,7 +14,7 @@ export const EmptyCardBox = styled.div`
   padding-bottom: 143.64px;
 `;
 
-export const EmptyCardTitle = styled.h2`
+export const CheckoutCardTitle = styled.h2`
   font-size: 20px;
   font-weight: 700;
   line-height: 27px;
@@ -25,15 +25,14 @@ export const EmptyCardTitle = styled.h2`
   margin-bottom: 24px;
 `;
 
-export const EmptyCardImage = styled.div`
-  max-width: 447px;
+export const CheckoutCardImage = styled.div`
+  max-width: 294.96px;
   width: 100%;
   height: 100%;
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: ${(props) => props.theme.border.style};
   margin-bottom: 24px;
   img {
     object-fit: contain;
