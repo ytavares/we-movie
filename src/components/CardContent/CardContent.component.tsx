@@ -75,7 +75,9 @@ export const CardContent: FunctionComponent<CardContentProps> = ({
 
   const handleRedirect = () => {
     router.push('/checkout');
+    movies.forEach((movie) => onDelete(movie.id, true));
   };
+
   return (
     <Card>
       <CardTable>

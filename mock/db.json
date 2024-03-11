@@ -37,12 +37,5 @@
       "image": "https://wefit-react-web-test.s3.amazonaws.com/eternals.png"
     }
   ],
-  "cart": [
-    {
-      "id": "1",
-      "title": "Viúva Negra",
-      "price": 9.99,
-      "image": "https://wefit-react-web-test.s3.amazonaws.com/viuva-negra.png"
-    }
-  ]
+  "cart": []
 }
