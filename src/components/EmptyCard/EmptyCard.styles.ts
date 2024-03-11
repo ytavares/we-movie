@@ -12,6 +12,9 @@ export const EmptyCardBox = styled.div`
   flex-direction: column;
   margin-bottom: 40px;
   padding-bottom: 143.64px;
+  @media (max-width: 768px) {
+    padding: 64px 66.69px 64px 66.69px;
+  }
 `;
 
 export const EmptyCardTitle = styled.h2`

@@ -14,6 +14,7 @@ const Theme = {
       main: '#2F2E41',
       secondary: '#333333',
       light: '#999999',
+      third: '#D9D9D9',
     },
     white: {
       main: '#FFFFFF',
@@ -23,13 +24,6 @@ const Theme = {
   border: {
     radius: '4px',
     style: '1.36px solid #3F3D56',
-  },
-
-  font: {
-    small: '0.5rem',
-    default: '1rem',
-    big: '2rem',
-    bigger: '3rem',
   },
 };
 

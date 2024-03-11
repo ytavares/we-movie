@@ -3,6 +3,7 @@ import { MovieCardProps } from './MovieCard.interface';
 import { Card, CardImage, CardTitle, CardValue } from './MovieCard.styles';
 import Image from 'next/image';
 import { Button } from '../Button';
+import { useConvertToReal } from '../../../hooks/useConvertToReal';
 
 export const MovieCard: FunctionComponent<MovieCardProps> = ({
   image,
@@ -11,7 +12,6 @@ export const MovieCard: FunctionComponent<MovieCardProps> = ({
   itemsInCart,
   onAddItem,
 }) => {
-  const formattedValue: string = `R$ ${price.toFixed(2).replace('.', ',')}`;
   return (
     <Card>
       <CardImage>
@@ -24,7 +24,7 @@ export const MovieCard: FunctionComponent<MovieCardProps> = ({
         />
       </CardImage>
       <CardTitle>{title}</CardTitle>
-      <CardValue>{formattedValue}</CardValue>
+      <CardValue>{useConvertToReal(price)}</CardValue>
       <Button
         text="ADICIONAR AO CARRINHO"
         onClick={onAddItem}

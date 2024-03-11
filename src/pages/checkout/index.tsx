@@ -1,6 +1,5 @@
-import { Header } from '@/components/Header';
-import { Layout } from '@/components/Layout';
-import { CheckoutCard } from '@/components/CheckoutCard';
+import { CheckoutCard, Header, Layout } from '@/components';
+
 export default function Checkout() {
   return (
     <>

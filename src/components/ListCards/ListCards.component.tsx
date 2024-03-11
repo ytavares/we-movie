@@ -5,8 +5,12 @@ import { MovieCard } from '../MovieCard';
 
 export const ListCards: FunctionComponent<ListCardsProps> = ({
   cards,
+  cartMovies,
   onAddItem,
 }) => {
+  const quantityOfItemInCart = (id?: number) => {
+    return cartMovies?.filter((item) => item.id === id).length;
+  };
   return (
     <List>
       {cards?.map((card) => (
@@ -15,6 +19,7 @@ export const ListCards: FunctionComponent<ListCardsProps> = ({
           image={card.image}
           title={card.title}
           price={card.price}
+          itemsInCart={quantityOfItemInCart(card.id)}
           onAddItem={() => onAddItem(card?.id)}
         />
       ))}

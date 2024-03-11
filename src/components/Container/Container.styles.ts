@@ -6,4 +6,7 @@ export const ContainerBox = styled.div`
   margin: 0 auto;
   position: relative;
   padding: 0 16px;
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
 `;
